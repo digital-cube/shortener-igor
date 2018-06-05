@@ -4,6 +4,7 @@ from base.application.components import Base
 from base.application.components import api
 from base.application.components import params
 from base.application.components import authenticated
+from sqlalchemy import desc
 
 import datetime
 import decimal
@@ -46,12 +47,32 @@ class Redirect(Base):
             return self.error("not found")
 
         self.redirect(db_url.url)
+
         return
 
 
 
 @api(
+    URI='/admin/last',
+
+)
+class AdminLast(Base):
+    @params(
+        {'name': 'limit', 'type': int, 'doc': 'url', 'required': True},
+    )
+    def get(self, limit):
+        session = base.common.orm.orm.session()
+
+        ret = []
+        for i in session.query(Url).order_by(desc(Url.created)).limit(limit).all():
+            ret.append([i.id, i.url, str(i.created)])
+
+        return self.ok({'list':ret})
+
+
+@api(
     URI='/short',
+
 )
 class ShortCreate(Base):
     @params(
