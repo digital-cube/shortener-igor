@@ -71,6 +71,16 @@ class AdminLast(Base):
 
 
 @api(
+    URI='/',
+    PREFIX=False
+
+)
+class Index(Base):
+    def get(self):
+        self.render('index.html')
+
+
+@api(
     URI='/short',
 
 )

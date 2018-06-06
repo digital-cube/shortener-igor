@@ -23,7 +23,7 @@ p {
 .hero {
   height: 100%;
   width: 100%;
-  background: url("url-shortener.jpg");
+  background: url("/static/url-shortener.jpg");
   /*background-size: 100vh;*/
   background-repeat: no-repeat;
   background-position: center center;
