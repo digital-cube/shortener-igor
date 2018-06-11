@@ -2,7 +2,7 @@
 
 app_name = 'shortener'
 app_description = 'base application'
-port = 8802
+port = 7778
 app_prefix = 'api'
 app_version = '0.0.1'
 models = [

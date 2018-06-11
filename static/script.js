@@ -14,9 +14,8 @@ function populate_last3() {
 
                     for (var i=0;i<data.list.length;i++) {
                         var adr = data.list[i][1];
-                        var dat = data.list[i][2];
                         console.log(i,adr);
-                        $("#last-three").append("<li>"+adr+"---"+dat+"</li>");
+                        $("#last-three").append("<li>"+adr+"</li>");
                     }
 
                }
