@@ -6,7 +6,7 @@ function populate_last3() {
     //         $("#xxx").append("<li>aaa</li>");
 
     $.ajax({
-               url: 'http://localhost:8802/api/admin/last?limit=3',
+               url: 'http://localhost:7778/api/admin/last?limit=3',
                type: 'GET',
                 success: function(response) {
                     var data = JSON.parse(response);
@@ -29,12 +29,12 @@ $(document).ready(function () {
 
     $('#create').click(function () {
               $.ajax({
-               url: 'http://localhost:8802/api/short',
+               url: 'http://localhost:7778/api/short',
                type: 'PUT',
                data: { url: $('#url').val()},
                success: function(response) {
                   var data = JSON.parse(response);
-                  $('#short-url').val('http://localhost:8802/r/' + data.id);
+                  $('#short-url').val('http://localhost:7778/r/' + data.id);
 
                   $("#last-three").append("<li>"+$('#url').val()+"</li>");
                }
