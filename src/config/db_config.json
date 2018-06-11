@@ -6,13 +6,6 @@
         "db_port": "3306",
         "db_type": "mysql",
         "db_user": "igor"
-    },
-    "8802": {
-        "db_host": "localhost",
-        "db_name": "shortener",
-        "db_password": "123",
-        "db_port": "3306",
-        "db_type": "mysql",
-        "db_user": "igor"
     }
+
 }
