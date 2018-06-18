@@ -77,7 +77,7 @@ class AdminLast(Base):
 )
 class Index(Base):
     def get(self):
-        self.render('index.html')
+        self.render('OLDindex.html')
 
 
 @api(

@@ -1,139 +1,118 @@
 @charset "UTF-8";
-@import "https://fonts.googleapis.com/css?family=Lobster|Pacifico";
-html, body, footer {
-  font-family: 'Lobster', cursive;
-  font-size: large;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-  margin: 10%;
-  /*background-color: #4f9cb8;*/
-}
-p {
-  font-family: 'Pacifico', cursive;
-}
-.content {
-  position: absolute;
-  left:0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  text-align: center;
-}
-.hero {
-  height: 100%;
-  width: 100%;
-  background: url("/static/url-shortener.jpg");
-  /*background-size: 100vh;*/
-  background-repeat: no-repeat;
-  background-position: center center;
-  display: table;
-}
-.content h1 {
-  text-align: center;
-  font-size: 300%;
-}
-footer {
-  position: absolute;
-  bottom: 0;
-  float: right;
-}
-ul {
-  display: flex;
-  transform: translate(-50%, -50%);
+@import "https://fonts.googleapis.com/css?family=Roboto";
 
+.url-shoretner {
+    color: #4A4A4A;
+    font-family: Roboto;
+    font-size: 50px;
+    letter-spacing: 5.21px;
+    line-height: 58px;
+    text-align: center;
 }
-ul li {
-  list-style: none;
-  position: relative;
-  margin: 0 10px;
-  float: right;
+.enter-a-long-url-to {
+    color: #4A4A4A;
+    font-family: Roboto;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 29px;
+    text-align: center;
 }
-ul li a {
-  width: 70px;
-  height: 40px;
-  background: #fff;
-  display: block;
-  text-align: center;
-  line-height: 40px;
-  font-size: 36px;
-  transition: .5s;
-  color: white;
+.shorten-bg {
+    height: 58px;
+    width: 980px;
+    border-radius: 14px 0px 0px 14px;
+    background-color: #FFFFFF;
+    /*margin-top: 50px;*/
+    border: none;
+    float: left;
 }
-ul li a:hover {
-  transform: translateY(-20px);
+.shorten-green {
+    height: 60px;
+    width: 160px;
+    background-color: #266075;
+    border: none;
+    float: left;
 }
-ul li a:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  z-index: -1;
-  transform: rotate(60deg);
+#shorten {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 0px 14px 14px 0px;
 }
-ul li a:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  z-index: -1;
-  transform: rotate(-60deg);
+.copy-bg {
+    height: 58px;
+    width: 400px;
+    border-radius: 14px 0px 0px 14px;
+    background-color: #FFFFFF;
+    border: none;
+    float: left;
 }
-ul li:nth-child(1) a,
-ul li:nth-child(1) a:before,
-ul li:nth-child(1) a:after {
-
-  background: #3b5998;
-}
-ul li:nth-child(2) a,
-ul li:nth-child(2) a:before,
-ul li:nth-child(2) a:after {
-
-  background: #c9510c;
-}
-ul li:nth-child(3) a,
-ul li:nth-child(3) a:before,
-ul li:nth-child(3) a:after {
-
-  background: #007bb6;
+.copy-green {
+    height: 60px;
+    width: 120px;
+    background-color: #266075;
+    border: none;
+    float: left;
 }
 #copy {
-  color: white;
-  background-color: tomato;
-  border-color: tomato;
-  padding: 8px;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 0px 14px 14px 0px;
 }
-#create {
-  color: white;
-  background-color: forestgreen;
-  border-color: darkgreen;
-  padding: 8px 110px;
-  /*margin: 2px;*/
-  margin-bottom: 7px;
+div  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-#url {
-  border-color: forestgreen;
-  padding: 8px;
-  margin: 2px;
+div#first_input {
+    padding: 50px;
 }
-#short-url {
-  border-color: tomato;
-  padding: 8px;
-  margin: 7px;
+#hero {
+    background: #EAE8E9 url("Pencil@2x.png") no-repeat bottom right 250px;
+    background-size: 80px;
+    /*background-size: cover;*/
+    height: 100%;
 }
 #logo {
-  margin: 5px;
+    height: 48px;
+    width: 206px;
+    margin: 50px;
 }
-#last-three {
-  margin: 10%;
-  list-style: none;
+footer {
+    /*width: 100%;*/
+    position: absolute;
+    bottom: 5%;
 }
-
-
-
+ul {
+    display: flex;
+    list-style: none;
+}
+ul li {
+    position: relative;
+    margin: 0 10px;
+}
+ul li a {
+    width: 50px;
+    height: 50px;
+    background: #000;
+    color: #FFFFFF;
+    display: block;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+    font-size: 30px;
+}
+ul li:nth-child(1) a {
+    background: #3b5998;
+}
+ul li:nth-child(2) a {
+    background: #c9510c;
+}
+ul li:nth-child(3) a {
+    background: #007bb6;
+}
