@@ -1,5 +1,8 @@
 # coding= utf-8
 
+import socket
+hn = socket.gethostname()
+
 app_name = 'shortener'
 app_description = 'base application'
 port = 7778
@@ -35,8 +38,12 @@ Please follow the link bellow to set Your new password:
 If You didn't request password change, please ignore this message.
 Best Regards
 '''
-static_path = None
-static_uri = None
+if hn == 'devel.digitalcube.rs':
+    static_path = '/home/shortener/work/shortener-igor/static'
+    static_uri = '/static'
+else:
+    static_path = None
+    static_uri = None
 log_directory = './log'
 register_allowed_roles = None
 registrators_allowed_roles = None
