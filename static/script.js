@@ -1,3 +1,7 @@
+var host_url = 'http://localhost:7778';
+// var host_url = 'http://min.bz';
+
+
 function populate_last3() {
     // alert("punim poslednja 3")
     // $("#xxx").append("<li>aaa</li>");
@@ -6,7 +10,7 @@ function populate_last3() {
     //         $("#xxx").append("<li>aaa</li>");
 
     $.ajax({
-               url: 'http://localhost:7778/api/admin/last?limit=3',
+               url: host_url+'/api/admin/last?limit=3',
                type: 'GET',
                 success: function(response) {
                     var data = JSON.parse(response);
@@ -24,25 +28,27 @@ function populate_last3() {
 }
 
 $(document).ready(function () {
+    var shortenerInput  = $(".shorten-bg").val();
 
     populate_last3();
 
-    $('#create').click(function () {
+    $('#shorten').click(function () {
+
               $.ajax({
-               url: 'http://localhost:7778/api/short',
+               url: host_url+'/api/short',
                type: 'PUT',
-               data: { url: $('#url').val()},
+               data: { url: $('.shorten-bg').val()},
                success: function(response) {
                   var data = JSON.parse(response);
-                  $('#short-url').val('http://localhost:7778/r/' + data.id);
+                  $('.copy-bg').val(host_url+'/r/' + data.id);
 
-                  $("#last-three").append("<li>"+$('#url').val()+"</li>");
+                  $("#last-three").append("<li>"+$('.shorten-bg').val()+"</li>");
                }
             });
     });
 
     $('#copy').click(function () {
-      var copyText = document.getElementById("short-url");
+      var copyText = document.getElementById("copybg");
 
       /* Select the text field */
       copyText.select();
@@ -51,3 +57,6 @@ $(document).ready(function () {
       document.execCommand("copy");
     });
 });
+
+
+
