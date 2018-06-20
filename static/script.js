@@ -1,5 +1,5 @@
-var host_url = 'http://localhost:7778';
-// var host_url = 'http://min.bz';
+// var host_url = 'http://localhost:7778';
+var host_url = 'http://min.bz';
 
 
 function populate_last3() {
@@ -43,7 +43,13 @@ $(document).ready(function () {
                   $('.copy-bg').val(host_url+'/r/' + data.id);
 
                   $("#last-three").append("<li>"+$('.shorten-bg').val()+"</li>");
+               },
+               error: function(response) {
+                var result = jQuery.parseJSON(response.responseText)
+                alert(result['message']);
+                
                }
+               
             });
     });
 

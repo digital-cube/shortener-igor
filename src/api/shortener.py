@@ -90,6 +90,9 @@ class ShortCreate(Base):
     )
     def put(self, url):
 
+        if url[:7].lower() != 'http://' and url[:8].lower() != 'https://':
+            return self.error('invalid URL schema, use http:// or https:// at beggining')
+
         session = base.common.orm.orm.session()
 
         for retries in range(0,10):
