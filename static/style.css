@@ -83,6 +83,20 @@ div#first_input {
     width: 206px;
     margin: 50px;
 }
+@media screen and (max-width: 403px) {
+    .url-shoretner {
+        font-size: 25px;
+    }
+    #logo {
+        height: 24px;
+        width: 103px;
+        margin: 25px;
+    }
+    .enter-a-long-url-to {
+        font-size: 12px;
+    }
+}
+
 footer {
     /*width: 100%;*/
     position: absolute;
